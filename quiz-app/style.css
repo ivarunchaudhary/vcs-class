@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 560px;
+  padding: 16px;
+}
+
+.screen {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 36px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Start Screen */
+#start-screen h1 {
+  font-size: 2rem;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+
+#start-screen p {
+  color: #718096;
+  margin-bottom: 28px;
+  font-size: 1rem;
+}
+
+/* Quiz Screen */
+.progress {
+  font-size: 0.875rem;
+  color: #718096;
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.question-card {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+#question-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#options-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#options-list li {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 0.975rem;
+  color: #2d3748;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+#options-list li:hover {
+  background: #ebf4ff;
+  border-color: #4299e1;
+}
+
+#options-list li.selected {
+  background: #ebf4ff;
+  border-color: #3182ce;
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+#options-list li.correct {
+  background: #f0fff4;
+  border-color: #48bb78;
+  color: #276749;
+}
+
+#options-list li.wrong {
+  background: #fff5f5;
+  border-color: #fc8181;
+  color: #9b2c2c;
+}
+
+/* Buttons */
+button {
+  background: #3182ce;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button:hover:not(:disabled) {
+  background: #2b6cb0;
+}
+
+button:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Result Screen */
+#result-screen h2 {
+  font-size: 1.75rem;
+  color: #1a202c;
+  margin-bottom: 16px;
+}
+
+.score-display {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3182ce;
+  margin-bottom: 8px;
+}
+
+#score-message {
+  color: #718096;
+  margin-bottom: 28px;
+  font-size: 1rem;
+}
