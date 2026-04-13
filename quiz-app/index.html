@@ -18,8 +18,18 @@
 
     <!-- Quiz Screen -->
     <div id="quiz-screen" class="screen hidden">
-      <div class="progress">
-        Question <span id="current-q">1</span> of <span id="total-q">5</span>
+      <div class="quiz-header">
+        <span class="progress-label">Question <span id="current-q">1</span> of <span id="total-q">5</span></span>
+        <div id="timer-display" class="timer">
+          <svg class="timer-ring" viewBox="0 0 40 40">
+            <circle class="timer-ring-bg" cx="20" cy="20" r="16"/>
+            <circle id="timer-ring-fill" class="timer-ring-fill" cx="20" cy="20" r="16"/>
+          </svg>
+          <span id="timer-text">15</span>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
       </div>
       <div class="question-card">
         <p id="question-text"></p>

@@ -44,11 +44,12 @@ const startScreen  = document.getElementById('start-screen');
 const quizScreen   = document.getElementById('quiz-screen');
 const resultScreen = document.getElementById('result-screen');
 
-const questionText = document.getElementById('question-text');
-const optionsList  = document.getElementById('options-list');
-const currentQEl   = document.getElementById('current-q');
-const totalQEl     = document.getElementById('total-q');
-const nextBtn      = document.getElementById('next-btn');
+const questionText  = document.getElementById('question-text');
+const optionsList   = document.getElementById('options-list');
+const currentQEl    = document.getElementById('current-q');
+const totalQEl      = document.getElementById('total-q');
+const nextBtn       = document.getElementById('next-btn');
+const progressFill  = document.getElementById('progress-fill');
 
 document.getElementById('start-btn').addEventListener('click', startQuiz);
 nextBtn.addEventListener('click', nextQuestion);
@@ -70,6 +71,9 @@ function loadQuestion() {
   const q = questions[currentIndex];
   currentQEl.textContent = currentIndex + 1;
   questionText.textContent = q.question;
+
+  // Update progress bar
+  progressFill.style.width = ((currentIndex / questions.length) * 100) + '%';
 
   // Clear previous options using safe DOM removal
   while (optionsList.firstChild) {
@@ -112,6 +116,7 @@ function nextQuestion() {
 }
 
 function showResult() {
+  progressFill.style.width = '100%';
   hide(quizScreen);
   show(resultScreen);
 
