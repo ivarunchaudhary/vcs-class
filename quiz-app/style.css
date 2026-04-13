@@ -48,8 +48,25 @@ body {
 .progress {
   font-size: 0.875rem;
   color: #718096;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 16px;
+}
+
+.timer-badge {
+  font-weight: 700;
+  font-size: 0.875rem;
+  background: #ebf4ff;
+  color: #3182ce;
+  padding: 3px 10px;
+  border-radius: 999px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.timer-badge.urgent {
+  background: #fff5f5;
+  color: #e53e3e;
 }
 
 .question-card {
