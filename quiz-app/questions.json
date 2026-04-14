@@ -1,0 +1,72 @@
+[
+  {
+    "question": "What does HTML stand for?",
+    "options": [
+      "Hyper Text Markup Language",
+      "High Tech Modern Language",
+      "Hyper Transfer Markup Language",
+      "Home Tool Markup Language"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which keyword is used to declare a variable in JavaScript (ES6+)?",
+    "options": ["var", "let", "define", "set"],
+    "answer": 1
+  },
+  {
+    "question": "What does CSS stand for?",
+    "options": [
+      "Creative Style Sheets",
+      "Cascading Style Sheets",
+      "Computer Style Sheets",
+      "Colorful Style Sheets"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which HTML tag is used to link an external JavaScript file?",
+    "options": ["<js>", "<link>", "<script>", "<javascript>"],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is NOT a JavaScript data type?",
+    "options": ["String", "Boolean", "Float", "Undefined"],
+    "answer": 2
+  },
+  {
+    "question": "What is the correct syntax for a JavaScript arrow function?",
+    "options": [
+      "function => () {}",
+      "const fn = () => {}",
+      "const fn => () {}",
+      "arrow fn() {}"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which CSS property is used to change the text color?",
+    "options": ["font-color", "text-color", "color", "foreground"],
+    "answer": 2
+  },
+  {
+    "question": "What does the DOM stand for?",
+    "options": [
+      "Document Object Model",
+      "Data Object Management",
+      "Display Output Mode",
+      "Document Oriented Markup"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which method adds an element to the end of a JavaScript array?",
+    "options": ["append()", "push()", "add()", "insert()"],
+    "answer": 1
+  },
+  {
+    "question": "Which HTML attribute is used to define inline styles?",
+    "options": ["class", "font", "styles", "style"],
+    "answer": 3
+  }
+]
