@@ -12,8 +12,25 @@
     <!-- Start Screen -->
     <div id="start-screen" class="screen">
       <h1>Quiz App</h1>
-      <p>Test your knowledge with 5 multiple-choice questions.</p>
+      <p>Test your knowledge with multiple-choice questions.</p>
+
+      <div class="difficulty-selector">
+        <span class="difficulty-label">Difficulty</span>
+        <div class="difficulty-buttons">
+          <button class="diff-btn active" data-difficulty="all">All</button>
+          <button class="diff-btn" data-difficulty="easy">Easy</button>
+          <button class="diff-btn" data-difficulty="medium">Medium</button>
+          <button class="diff-btn" data-difficulty="hard">Hard</button>
+        </div>
+      </div>
+
       <button id="start-btn">Start Quiz</button>
+
+      <!-- Leaderboard -->
+      <div id="leaderboard-section" class="leaderboard-section hidden">
+        <h3>Leaderboard</h3>
+        <ol id="leaderboard-list"></ol>
+      </div>
     </div>
 
     <!-- Quiz Screen -->
@@ -43,7 +60,17 @@
       <h2>Quiz Complete!</h2>
       <p class="score-display">Your Score: <span id="score"></span> / <span id="total"></span></p>
       <p id="score-message"></p>
-      <button id="restart-btn">Try Again</button>
+
+      <!-- Past Attempts -->
+      <div id="history-section" class="history-section hidden">
+        <h3>Past Attempts</h3>
+        <ul id="history-list"></ul>
+      </div>
+
+      <div class="result-actions">
+        <button id="restart-btn">Try Again</button>
+        <button id="home-btn" class="btn-secondary">Home</button>
+      </div>
     </div>
 
   </div>
