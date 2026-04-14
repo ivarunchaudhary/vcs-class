@@ -1,43 +1,6 @@
-const questions = [
-  {
-    question: "What does HTML stand for?",
-    options: [
-      "Hyper Text Markup Language",
-      "High Tech Modern Language",
-      "Hyper Transfer Markup Language",
-      "Home Tool Markup Language"
-    ],
-    answer: 0
-  },
-  {
-    question: "Which keyword is used to declare a variable in JavaScript (ES6+)?",
-    options: ["var", "let", "define", "set"],
-    answer: 1
-  },
-  {
-    question: "What does CSS stand for?",
-    options: [
-      "Creative Style Sheets",
-      "Cascading Style Sheets",
-      "Computer Style Sheets",
-      "Colorful Style Sheets"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which HTML tag is used to link an external JavaScript file?",
-    options: ["<js>", "<link>", "<script>", "<javascript>"],
-    answer: 2
-  },
-  {
-    question: "Which of the following is NOT a JavaScript data type?",
-    options: ["String", "Boolean", "Float", "Undefined"],
-    answer: 2
-  }
-];
-
 const TIME_LIMIT = 15;
 
+let questions = [];
 let currentIndex = 0;
 let score = 0;
 let answered = false;
@@ -62,7 +25,22 @@ document.getElementById('start-btn').addEventListener('click', startQuiz);
 nextBtn.addEventListener('click', nextQuestion);
 document.getElementById('restart-btn').addEventListener('click', restartQuiz);
 
-function startQuiz() {
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+async function loadQuestions() {
+  const response = await fetch('questions.json');
+  const data = await response.json();
+  questions = shuffle(data);
+}
+
+async function startQuiz() {
+  await loadQuestions();
   currentIndex = 0;
   score = 0;
   totalQEl.textContent = questions.length;
