@@ -45,12 +45,111 @@ body {
   letter-spacing: -0.5px;
 }
 
-#start-screen p {
+#start-screen > p {
   color: #718096;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-size: 1.05rem;
   line-height: 1.6;
 }
+
+/* Difficulty Selector */
+.difficulty-selector {
+  margin-bottom: 28px;
+}
+
+.difficulty-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.difficulty-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.diff-btn {
+  background: #edf2f7;
+  color: #4a5568;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
+  letter-spacing: 0;
+}
+
+.diff-btn:hover:not(:disabled) {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+.diff-btn.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* Leaderboard on Start Screen */
+.leaderboard-section {
+  margin-top: 32px;
+  text-align: left;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 24px;
+}
+
+.leaderboard-section h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #4a5568;
+  margin-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+#leaderboard-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#leaderboard-list li {
+  font-size: 0.875rem;
+  color: #4a5568;
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#leaderboard-list li::before {
+  content: counter(list-item);
+  counter-increment: list-item;
+  font-weight: 700;
+  font-size: 0.8rem;
+  min-width: 18px;
+  color: #a0aec0;
+}
+
+#leaderboard-list {
+  counter-reset: list-item;
+}
+
+#leaderboard-list li.gold   { background: #fffff0; color: #744210; }
+#leaderboard-list li.silver { background: #f7fafc; color: #2d3748; }
+#leaderboard-list li.bronze { background: #fffaf0; color: #7b341e; }
 
 /* Quiz Header (progress label + timer) */
 .quiz-header {
@@ -213,6 +312,16 @@ button:disabled {
   transform: none;
 }
 
+.btn-secondary {
+  background: #edf2f7;
+  color: #4a5568;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #e2e8f0;
+  opacity: 1;
+}
+
 /* Result Screen */
 #result-screen h2 {
   font-size: 1.85rem;
@@ -229,6 +338,47 @@ button:disabled {
 
 #score-message {
   color: #718096;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-size: 1rem;
+}
+
+.result-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* Past Attempts (History) */
+.history-section {
+  margin-top: 24px;
+  text-align: left;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+}
+
+.history-section h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #4a5568;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+#history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#history-list li {
+  font-size: 0.85rem;
+  color: #718096;
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 7px 12px;
+  text-align: left;
 }

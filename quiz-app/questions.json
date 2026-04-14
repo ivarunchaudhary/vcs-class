@@ -7,12 +7,16 @@
       "Hyper Transfer Markup Language",
       "Home Tool Markup Language"
     ],
-    "answer": 0
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "HTML"
   },
   {
     "question": "Which keyword is used to declare a variable in JavaScript (ES6+)?",
     "options": ["var", "let", "define", "set"],
-    "answer": 1
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "JavaScript"
   },
   {
     "question": "What does CSS stand for?",
@@ -22,17 +26,23 @@
       "Computer Style Sheets",
       "Colorful Style Sheets"
     ],
-    "answer": 1
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "CSS"
   },
   {
     "question": "Which HTML tag is used to link an external JavaScript file?",
     "options": ["<js>", "<link>", "<script>", "<javascript>"],
-    "answer": 2
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "HTML"
   },
   {
     "question": "Which of the following is NOT a JavaScript data type?",
     "options": ["String", "Boolean", "Float", "Undefined"],
-    "answer": 2
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "JavaScript"
   },
   {
     "question": "What is the correct syntax for a JavaScript arrow function?",
@@ -42,12 +52,16 @@
       "const fn => () {}",
       "arrow fn() {}"
     ],
-    "answer": 1
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "JavaScript"
   },
   {
     "question": "Which CSS property is used to change the text color?",
     "options": ["font-color", "text-color", "color", "foreground"],
-    "answer": 2
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "CSS"
   },
   {
     "question": "What does the DOM stand for?",
@@ -57,16 +71,62 @@
       "Display Output Mode",
       "Document Oriented Markup"
     ],
-    "answer": 0
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "JavaScript"
   },
   {
     "question": "Which method adds an element to the end of a JavaScript array?",
     "options": ["append()", "push()", "add()", "insert()"],
-    "answer": 1
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "JavaScript"
   },
   {
     "question": "Which HTML attribute is used to define inline styles?",
     "options": ["class", "font", "styles", "style"],
-    "answer": 3
+    "answer": 3,
+    "difficulty": "easy",
+    "category": "HTML"
+  },
+  {
+    "question": "What is the output of `typeof null` in JavaScript?",
+    "options": ["null", "undefined", "object", "boolean"],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "JavaScript"
+  },
+  {
+    "question": "Which CSS selector has the highest specificity?",
+    "options": ["element", "class", "ID", "inline style"],
+    "answer": 3,
+    "difficulty": "hard",
+    "category": "CSS"
+  },
+  {
+    "question": "What does `Array.prototype.reduce()` return when called on an empty array without an initial value?",
+    "options": ["null", "undefined", "0", "TypeError"],
+    "answer": 3,
+    "difficulty": "hard",
+    "category": "JavaScript"
+  },
+  {
+    "question": "Which HTTP method is idempotent but NOT safe?",
+    "options": ["GET", "POST", "PUT", "PATCH"],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Web"
+  },
+  {
+    "question": "In CSS Flexbox, what does `flex: 1` shorthand expand to?",
+    "options": [
+      "flex-grow: 1, flex-shrink: 0, flex-basis: auto",
+      "flex-grow: 1, flex-shrink: 1, flex-basis: 0%",
+      "flex-grow: 1, flex-shrink: 1, flex-basis: auto",
+      "flex-grow: 0, flex-shrink: 1, flex-basis: 1px"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "CSS"
   }
 ]
