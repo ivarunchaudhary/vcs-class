@@ -382,3 +382,36 @@ button:disabled {
   padding: 7px 12px;
   text-align: left;
 }
+
+/* ── Nav link back to landing page ── */
+.back-home-link {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #a0aec0;
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: color 0.15s;
+}
+.back-home-link:hover { color: #667eea; }
+
+/* ── Anchor styled like secondary button ── */
+.btn-anchor {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #edf2f7 !important;
+  color: #4a5568 !important;
+  border-radius: 10px;
+  padding: 13px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.btn-anchor:hover {
+  background: #e2e8f0 !important;
+  transform: translateY(-1px);
+}
+
