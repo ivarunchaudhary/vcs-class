@@ -1,0 +1,9 @@
+{
+  "buildCommand": null,
+  "installCommand": null,
+  "framework": null,
+  "outputDirectory": "quiz-app",
+  "routes": [
+    { "src": "/", "dest": "/landing.html" }
+  ]
+}
